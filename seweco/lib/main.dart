@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'SewEco',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -20,9 +20,12 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'SewEco!'),
+      routes: {
+        '/repair': (context) => RepairOptionsScreen()
+      }
     );
   }
 }
@@ -93,13 +96,20 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            ElevatedButton(
+              onPressed: null, 
+              child: const Text('I want to repair something')
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: null, 
+              child: const Text('I want to resell something')
             ),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: null, 
+              child: const Text('I want to recycle or donate something')
+            )
           ],
         ),
       ),
@@ -108,6 +118,15 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class RepairOptionsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
     );
   }
 }
