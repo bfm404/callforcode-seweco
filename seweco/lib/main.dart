@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'repair/repair.dart';
+import 'recycle/recycle.dart';
+import 'resell/resell.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +27,9 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(title: 'SewEco!'),
       routes: {
-        '/repair': (context) => RepairOptionsScreen()
+        '/repair': (context) => RepairOptionsScreen(),
+        '/recycle': (context) => RecycleScreen(),
+        '/resell': (context) => ResellScreen()
       }
     );
   }
@@ -49,18 +54,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -97,36 +90,28 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              onPressed: null, 
+              onPressed: () {
+                Navigator.pushNamed(context, '/repair');
+              }, 
               child: const Text('I want to repair something')
             ),
             const SizedBox(height: 30),
             ElevatedButton(
-              onPressed: null, 
+              onPressed: () {
+                Navigator.pushNamed(context, '/resell');
+              }, 
               child: const Text('I want to resell something')
             ),
             const SizedBox(height: 30),
             ElevatedButton(
-              onPressed: null, 
+              onPressed: () {
+                Navigator.pushNamed(context, '/recycle');
+              }, 
               child: const Text('I want to recycle or donate something')
             )
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
-
-class RepairOptionsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
     );
   }
 }
