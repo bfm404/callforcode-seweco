@@ -4,6 +4,7 @@ In order to limit the impact of the fashion industry on the planet, Sew Eco! is 
 
 ## Pre-requisites
 Installing Flutter: https://flutter.dev/docs/get-started/install
+
 VSCode setup: https://flutter.dev/docs/development/tools/vs-code
 
 ## Running
@@ -22,5 +23,6 @@ When asked, choose "Chrome"
 
 ## Useful Links
 Creating your first flutter app: https://flutter.dev/docs/get-started/codelab
+
 Flutter getting started links: https://flutter.dev/docs/get-started/learn-more
 
