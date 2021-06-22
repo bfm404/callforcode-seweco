@@ -93,21 +93,21 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.pushNamed(context, '/repair');
               }, 
-              child: const Text('I want to repair something')
+              child: const Text('I want to repair an item')
             ),
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/resell');
               }, 
-              child: const Text('I want to resell something')
+              child: const Text('I want to resell an item')
             ),
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/recycle');
               }, 
-              child: const Text('I want to recycle or donate something')
+              child: const Text('I want to recycle or donate an item')
             )
           ],
         ),
